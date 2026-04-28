@@ -1,0 +1,22 @@
+1. Apply effect functions should be the effects after taking the actions. For example this one is saying when the ghost disappears, the world changes accordingly.
+We should:
+- Mark the ghost as banished (is_banished = True)
+- Drop all of the ghost's items at the current location
+- Remove the ghost from the scene
+- Print the result message
+Make the actions actuall effect the game states.
+
+2. It's supposed to be asking Who is being proposed to?
+To not get focused about the subjective, the instruction needs to be seperated into:
+- Who is proposing to?
+- Who is the object of the proposal?
+Use `self.proposer` to find the character from the complete instruction.
+And then extracts the part after `propose` from the instruction.
+Use `self.propositioned`to find the target character from the remaining text.
+
+3. The Block system's logic is: if `is_blocked()` returns `True`, movement is blocked; if it returns `False`, movement is allowed.
+Scan all items belonging to all characters at the current location. If any item has `is_blocked == True`, movement is allowed. Otherwise, movement is blocked.
+Lights don't need to be held by the player; any character present carrying a light source works.
+
+4. Lots of if else statements and since my game is a little complex, there are many different settings and preconditions to check.
+I really enjoy designing the game and it's really interesting to have my game really playable with what I designed it to look like.

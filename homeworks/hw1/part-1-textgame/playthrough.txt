@@ -1,0 +1,14 @@
+choose sword
+team up with spear
+open gate
+go south
+attack
+dodge
+attack
+spear dodge
+attack
+open door
+go south
+choose princess
+go east
+eat with princess

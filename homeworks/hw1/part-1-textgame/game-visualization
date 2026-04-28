@@ -1,0 +1,17 @@
+digraph {
+	node [color=lightblue2 style=filled]
+	"Starting Room" [label=<<b>Starting Room</b><br />You stand before a sealed dungeon gate. A weapon rack waits beside you.<br />You see: a rack holding a sword, spear, magic wand, and bow<br/><i>choose sword</i><br/><i>team up with sword</i><br/><i>choose spear</i><br/><i>team up with spear</i><br/><i>choose magic</i><br/><i>team up with magic</i><br/><i>choose arrow</i><br/><i>team up with arrow</i>a closed iron gate<br/><i>open gate</i>>]
+	"Starting Room" -> "Monster Room" [label="South
+The closed iron gate blocks the way south." style=dotted]
+	"Starting Room" -> Restaurant [label=East]
+	"Monster Room" [label=<<b>Monster Room</b><br />You enter a stone arena. The Minotaur paws the ground and snorts.<br />You see: a massive Minotaur with bronze horns<br/><i>attack</i><br/><i>dodge</i><br/><i>open door</i><br/><i>sword dodge</i><br/><i>spear dodge</i><br/><i>magic dodge</i><br/><i>arrow dodge</i>>]
+	"Monster Room" -> Restaurant [label=North]
+	"Monster Room" -> "Treasure Room" [label="South
+The treasure door will not open until you beat the Minotaur, dodge an attack, and open the door." style=dotted]
+	Restaurant [label=<<b>Restaurant</b><br />A warm underground restaurant glows with lantern light.<br />You see: a restaurant menu<br/><i>drink beer</i><br/><i>drink bear</i><br/><i>eat meal</i><br/><i>eat with princess</i><br/><i>go back</i><br/><i>change sword</i><br/><i>change spear</i><br/><i>change magic</i><br/><i>change arrow</i>>]
+	Restaurant -> "Starting Room" [label=West]
+	Restaurant -> "Monster Room" [label=South]
+	"Treasure Room" [label=<<b>Treasure Room</b><br />Gold shines around a princess and a suspicious treasure box.<br />You see: a brave princess waiting beside the treasure<br/><i>choose princess</i>a glittering treasure box<br/><i>choose treasure box</i>>]
+	"Treasure Room" -> "Monster Room" [label=West]
+	"Treasure Room" -> Restaurant [label=East]
+}

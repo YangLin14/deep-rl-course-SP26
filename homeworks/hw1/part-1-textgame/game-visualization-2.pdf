@@ -1,0 +1,58 @@
+%PDF-1.4
+1 0 obj << /Type /Catalog /Pages 2 0 R >> endobj
+2 0 obj << /Type /Pages /Kids [3 0 R] /Count 1 >> endobj
+3 0 obj << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >> endobj
+4 0 obj << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> endobj
+5 0 obj << /Length 1408 >> stream
+1 w
+BT /F1 18 Tf 200 750 Td (Minotaur Dungeon Map) Tj ET
+BT /F1 10 Tf 82 50 Td (Win: choose princess -> go east -> eat with princess. Lose: choose treasure box or HP reaches 0.) Tj ET
+80 560 150 60 re S
+BT /F1 12 Tf 102 595 Td (Starting Room) Tj ET
+380 560 150 60 re S
+BT /F1 12 Tf 402 595 Td (Restaurant) Tj ET
+80 350 150 60 re S
+BT /F1 12 Tf 102 385 Td (Monster Room) Tj ET
+380 350 150 60 re S
+BT /F1 12 Tf 402 385 Td (Treasure Room) Tj ET
+155 560 m 155 410 l S
+BT /F1 9 Tf 120.0 495.0 Td (south / gate) Tj ET
+155 410 m 149 414 l S
+155 410 m 149 406 l S
+230 590 m 380 590 l S
+BT /F1 9 Tf 270.0 600.0 Td (east ->) Tj ET
+380 590 m 374 594 l S
+380 590 m 374 586 l S
+455 560 m 155 410 l S
+BT /F1 9 Tf 270.0 495.0 Td (south ->) Tj ET
+155 410 m 149 414 l S
+155 410 m 149 406 l S
+230 380 m 380 380 l S
+BT /F1 9 Tf 270.0 390.0 Td (south -> after Minotaur) Tj ET
+380 380 m 374 384 l S
+380 380 m 374 376 l S
+380 365 m 230 365 l S
+BT /F1 9 Tf 270.0 375.0 Td (west -> refight) Tj ET
+230 365 m 224 369 l S
+230 365 m 224 361 l S
+455 410 m 455 560 l S
+BT /F1 9 Tf 420.0 495.0 Td (east -> restaurant) Tj ET
+455 560 m 449 564 l S
+455 560 m 449 556 l S
+BT /F1 8 Tf 80 525 Td (choose weapon, team up, open gate) Tj ET
+BT /F1 8 Tf 380 525 Td (drink beer, eat meal, eat with princess) Tj ET
+BT /F1 8 Tf 80 315 Td (attack, dodge, ally dodge, open door) Tj ET
+BT /F1 8 Tf 380 315 Td (choose princess OR choose treasure box) Tj ET
+endstream endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+trailer << /Size 6 /Root 1 0 R >>
+startxref
+1771
+%%EOF

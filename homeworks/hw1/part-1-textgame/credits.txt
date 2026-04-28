@@ -1,0 +1,49 @@
+ChatGPT5.5
+
+1. How exactly do I implement apply_effects?
+
+def apply_effects(self):
+    self.ghost.set_property("is_banished", True)
+
+    dropped_items = list(self.ghost.inventory.values())
+    for item in dropped_items:
+        self.ghost.remove_from_inventory(item)
+        self.character.location.add_item(item)
+
+    self.character.location.remove_character(self.ghost)
+    self.parser.ok("You read the runes aloud. The ghost vanishes, leaving its possessions behind.")
+
+
+2. How to implement Propose Action?
+
+def __init__(self, game, command):
+    super().__init__(game)
+    self.proposer = self.parser.get_character(command)
+
+    command_after_propose = command
+    if "propose" in command:
+        command_after_propose = command.split("propose", 1)[1]
+
+    self.propositioned = self.parser.get_character(command_after_propose)
+
+
+3. How to do Darkness Blocks?
+
+class Darkness(blocks.Block):
+    """
+    Blocks progress in this direction unless the character has something that lights the way.
+    """
+
+    def __init__(self, location: things.Location):
+        super().__init__("Darkness blocks your way", "It's too dark to go that way.")
+        self.location = location
+
+    def is_blocked(self) -> bool:
+        for character in self.location.characters.values():
+            for item in character.inventory.values():
+                if item.get_property("is_lit"):
+                    return False
+
+        return True
+
+4. I asked ChatGPT5.5 to help me implement my_game.
