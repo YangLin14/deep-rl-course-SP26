@@ -168,4 +168,5 @@ save.txt
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-pddl-parser/
+homeworks/hw1/part-4-pddl-extra-credit/pddl-parser
+.DS_Store
