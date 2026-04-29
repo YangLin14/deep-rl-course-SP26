@@ -1,0 +1,39 @@
+Explanations for HW1 Part 4
+
+I chose the wikiHow article "How to Survive in the Woods" and translated selected survival tasks into PDDL.
+The PDDL domain is called survive_in_the_woods. It represents a small survival-planning world with players, 
+locations, directions, items, and water.
+
+The domain.pddl file defines the general rules of the world. 
+The types include player, location, direction, item, and water. 
+The predicates describe facts that can be true in the world, such as where objects are located, 
+whether a player has an item, 
+whether a location has a water source, 
+whether water is untreated or treated, 
+whether a fire exists, and 
+whether the player has shelter.
+
+The action schemas describe what the planner is allowed to do. 
+For example, go moves the player between connected locations, get picks up an item, 
+get_water collects water from a location with a water source, strain_water uses cloth to strain water, 
+boil_water makes water treated if the player has a fire and a container, 
+and build_shelter makes the player sheltered after the player has branches and leaves.
+
+I undersood the three problem files.
+- problem-collect-water.pddl asks the planner to get water into the player's inventory.
+  The player starts at camp, picks up a canteen, walks to the waterfall, and collects water. 
+- problem-purify-water.pddl asks the planner to make water treated. 
+  The player starts with untreated water and uses cloth, a pot, kindling, wood, a fire pit, and fire to boil the water. 
+- problem-build-shelter.pddl asks the planner to make the player sheltered by moving to the grove, 
+  collecting branches and leaves, and building a shelter.
+
+The JSON file survive_in_the_woods.json contains annotations connecting the PDDL elements to natural language descriptions 
+from the wikiHow article. It includes the article URL and title, lists the PDDL types, actions, 
+and predicates, and gives descriptions and mentions for selected actions and predicates. 
+For example, boil_water is connected to the article instruction about boiling water, 
+and has_water_source is connected to phrases about finding fresh water.
+
+The main thing I learned is that PDDL is good for representing clear symbolic actions with preconditions and effects, 
+but it is limited for real-world instructions. wikiHow often includes uncertainty, time, quantities, safety advice, 
+and judgment calls. Those ideas are harder to represent in the simple STRIPS-style PDDL used in this assignment, 
+so I simplified them into discrete predicates and actions.

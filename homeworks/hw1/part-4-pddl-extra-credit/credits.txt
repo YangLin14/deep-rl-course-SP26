@@ -1,0 +1,33 @@
+LLM Usage Credits for HW1 Part 4
+
+I used an LLM to help implement and debug this submission.
+
+Implementation-related prompts used:
+
+1. "walk me thru part 4 in details explaining the tasks and the todos"
+   Purpose: I asked the LLM to explain the requirements for Part 4, including the PDDL files, JSON annotations, and writeup.
+
+2. "give me some examples solutions for how I can start on implementing the todos"
+   Purpose: I asked the LLM to help create examples for Part 4 tasks.
+
+3. I asked the LLM to create and debug a PDDL domain based on the wikiHow article "How to Survive in the Woods."
+   Purpose: The LLM helped draft domain.pddl with types, predicates, and action schemas.
+
+4. I asked the LLM to create multiple PDDL problem files.
+   Purpose: The LLM helped draft problem-collect-water.pddl, problem-purify-water.pddl, and problem-build-shelter.pddl.
+
+5. I asked the LLM to run the local parser/planner and fix any errors.
+   Purpose: The LLM helped identify parser limitations, fix type declarations, and revise action preconditions so the planner produced valid plans.
+
+6. I asked the LLM to create a JSON annotation file.
+   Purpose: The LLM helped draft survive_in_the_woods.json with natural language descriptions and wikiHow phrase mentions mapped to PDDL elements.
+
+Files for which the LLM provided implementation help:
+
+- domain.pddl
+- problem-collect-water.pddl
+- problem-purify-water.pddl
+- problem-build-shelter.pddl
+- survive_in_the_woods.json
+
+I reviewed the generated files and used the local PDDL parser, planner, and autograder feedback to check that the PDDL and JSON files were valid.

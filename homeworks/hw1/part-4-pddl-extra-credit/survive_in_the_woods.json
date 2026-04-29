@@ -1,0 +1,232 @@
+{
+  "survive_in_the_woods": {
+    "wikihow_url": "https://www.wikihow.com/Survive-in-the-Woods",
+    "wikihow_title": "How to Survive in the Woods",
+    "share_under_cc_by": "yes",
+    "types": [
+      "player",
+      "location",
+      "direction",
+      "item",
+      "water"
+    ],
+    "actions": [
+      "go",
+      "get",
+      "drop",
+      "get_water",
+      "fill_bottle",
+      "strain_water",
+      "collect_kindling",
+      "collect_wood",
+      "build_fire_pit",
+      "light_fire",
+      "boil_water",
+      "purify_in_sunlight",
+      "gather_leaves",
+      "cut_branches",
+      "build_shelter",
+      "signal_rescue"
+    ],
+    "predicates": [
+      "at",
+      "connected",
+      "blocked",
+      "inventory",
+      "has_water_source",
+      "container",
+      "untreated",
+      "strained",
+      "treated",
+      "cloth",
+      "clear_plastic",
+      "sunny",
+      "has_fire_pit",
+      "has_fire",
+      "dry",
+      "kindling_material",
+      "wood_material",
+      "leaf_material",
+      "branch_material",
+      "sharp",
+      "cuttable",
+      "sheltered",
+      "visible_smoke",
+      "rescued"
+    ],
+    "natural_language_descriptions": {
+      "types": {
+        "player": {
+          "description": "The person trying to survive in the woods."
+        },
+        "location": {
+          "description": "A place in the wilderness such as camp, a path, a waterfall, or a grove."
+        },
+        "direction": {
+          "description": "A direction used for moving between connected locations."
+        },
+        "item": {
+          "description": "A physical object that can be carried or used."
+        },
+        "water": {
+          "description": "Collected drinking water that may be untreated or treated."
+        }
+      },
+      "actions": {
+        "get_water": {
+          "description": "Collect water from a nearby water source.",
+          "prerequisites": "The player is at a location with a water source and has a container.",
+          "results": "The player has water, but it is untreated."
+        },
+        "strain_water": {
+          "description": "Use cloth or clothing to strain water.",
+          "prerequisites": "The player has untreated water and cloth.",
+          "results": "The water has been strained."
+        },
+        "boil_water": {
+          "description": "Boil strained water to kill contaminants.",
+          "prerequisites": "The player has water, a pot, and access to fire.",
+          "results": "The water becomes treated."
+        },
+        "purify_in_sunlight": {
+          "description": "Use a clear plastic bottle and direct sunlight to purify water.",
+          "prerequisites": "The player has water in a clear plastic container at a sunny location.",
+          "results": "The water becomes treated."
+        },
+        "collect_kindling": {
+          "description": "Collect dry small material to help start a fire.",
+          "prerequisites": "Dry kindling is at the player's location.",
+          "results": "The player has kindling."
+        },
+        "collect_wood": {
+          "description": "Collect dry wood to maintain a fire.",
+          "prerequisites": "Dry wood is at the player's location.",
+          "results": "The player has wood."
+        },
+        "build_fire_pit": {
+          "description": "Prepare a safe place to make a fire.",
+          "prerequisites": "The player is at the chosen location.",
+          "results": "The location has a fire pit."
+        },
+        "light_fire": {
+          "description": "Light a fire using dry kindling and wood.",
+          "prerequisites": "The player has dry kindling and wood at a location with a fire pit.",
+          "results": "The location has fire."
+        },
+        "gather_leaves": {
+          "description": "Gather leaves to insulate or cover a shelter.",
+          "prerequisites": "Leaves are at the player's location.",
+          "results": "The player has leaves."
+        },
+        "cut_branches": {
+          "description": "Cut branches with a sharp tool.",
+          "prerequisites": "The player has a sharp tool at a cuttable location.",
+          "results": "The player has branches."
+        },
+        "build_shelter": {
+          "description": "Use branches and leaves to build a simple shelter.",
+          "prerequisites": "The player has branch material and leaf material.",
+          "results": "The player is sheltered."
+        },
+        "signal_rescue": {
+          "description": "Use a fire to make visible smoke for rescue.",
+          "prerequisites": "The player is at a location with fire.",
+          "results": "The player has signaled for rescue."
+        }
+      },
+      "predicates": {
+        "has_water_source": {
+          "description": "The location has a creek, stream, pond, waterfall, or other source of water."
+        },
+        "untreated": {
+          "description": "Water has not yet been made safe."
+        },
+        "strained": {
+          "description": "Large particles have been removed from water using cloth."
+        },
+        "treated": {
+          "description": "Water has been purified and is safe to drink."
+        },
+        "has_fire": {
+          "description": "A location has a lit fire that can boil water or make smoke."
+        },
+        "sheltered": {
+          "description": "The player has built a shelter."
+        }
+      }
+    },
+    "problems": {
+      "collect_water": {
+        "part_number": "1",
+        "method_number": "1",
+        "step_number": "1",
+        "step_contents": "Search for a source of fresh water. Look for signs of fresh water nearby like areas of green foliage, low-lying areas where water could be collected, and signs of wildlife.",
+        "mentions": {
+          "actions": {
+            "get_water": [
+              "Search for a source of fresh water",
+              "water could be collected"
+            ]
+          },
+          "predicates": {
+            "has_water_source": [
+              "a creek, stream, or pond is nearby",
+              "source of fresh water"
+            ]
+          }
+        }
+      },
+      "purify_water": {
+        "part_number": "1",
+        "method_number": "1",
+        "step_number": "6",
+        "step_contents": "Purify any water that you find. Use a piece of cloth or clothing to strain the water, then boil the water for 10 minutes. A clear plastic bottle in direct sunlight can also purify water.",
+        "mentions": {
+          "actions": {
+            "strain_water": [
+              "Use a piece of cloth or clothing to strain the water"
+            ],
+            "boil_water": [
+              "boil the water for 10 minutes"
+            ],
+            "purify_in_sunlight": [
+              "place the bottle on its side in direct sunlight for 6 hours"
+            ]
+          },
+          "predicates": {
+            "treated": [
+              "purify any water that you find"
+            ],
+            "clear_plastic": [
+              "clear plastic bottle"
+            ]
+          }
+        }
+      },
+      "build_shelter": {
+        "part_number": "1",
+        "method_number": "1",
+        "step_number": "shelter",
+        "step_contents": "A survival plan also needs shelter. In this PDDL problem I model gathering leaves, cutting branches, and using those materials to build a simple shelter.",
+        "mentions": {
+          "actions": {
+            "gather_leaves": [
+              "gathering leaves"
+            ],
+            "cut_branches": [
+              "cutting branches"
+            ],
+            "build_shelter": [
+              "build a simple shelter"
+            ]
+          },
+          "predicates": {
+            "sheltered": [
+              "needs shelter"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
