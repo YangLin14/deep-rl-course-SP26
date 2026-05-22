@@ -33,6 +33,14 @@ def get_download_links(game_id: str) -> list[str]:
             links.append(href)
     return links
 
+def fetch_games(searchfor: str) -> list[dict]:
+    response = httpx.get(
+        f"{BASE_URL}/search",
+        params={"json": "1", "game": "1", "searchfor": searchfor},
+        follow_redirects=True,
+    )
+    data = response.json()
+    return data["games"]
 
 @mcp.tool()
 def get_top_rated_game() -> str:
@@ -50,7 +58,17 @@ def get_top_rated_game() -> str:
     #       "gblorb_urls": [<string>, ...]# list of download URLs
     #     }
 
-    pass
+    games = fetch_games("#ratings:1-")
+    game = sorted(games, key=lambda game: float(game["starSort"]), reverse=True)[0]
+    gblorb_urls = get_gblorb_links(game["tuid"])
+
+    return json.dumps({
+        "title": game["title"],
+        "author": game["author"],
+        "average_rating": float(game["averageRating"]),
+        "num_ratings": int(game["numRatings"]),
+        "gblorurls": gblorb_urls,
+    })
 
 
 @mcp.tool()
@@ -68,7 +86,17 @@ def get_most_rated_game() -> str:
     #       "num_ratings": <int>,         # from game["numRatings"]
     #       "gblorb_urls": [<string>, ...]# list of download URLs
     #     }
-    pass
+    games = fetch_games("#ratings:1-")
+    game = sorted(games, key=lambda game: float(game["numRatings"]), reverse=True)[0]
+    gblorb_urls = get_gblorb_links(game["tuid"])
+
+    return json.dumps({
+        "title": game["title"],
+        "author": game["author"],
+        "average_rating": float(game["averageRating"]),
+        "num_ratings": int(game["numRatings"]),
+        "gblorurls": gblorb_urls,
+    })
 
 
 @mcp.tool()
@@ -86,7 +114,17 @@ def get_game_by_title(title: str) -> str:
     #       "num_ratings": <int>,          # from game["numRatings"]
     #       "download_urls": [<string>, ...] # list of download URLs
     #     }
-    pass
+    games = fetch_games(title)
+    game = games[0]
+    gblorb_urls = get_gblorb_links(game["tuid"])
+
+    return json.dumps({
+        "title": game["title"],
+        "author": game["author"],
+        "average_rating": float(game["averageRating"]),
+        "num_ratings": int(game["numRatings"]),
+        "gblorurls": gblorb_urls,
+    })
 
 
 if __name__ == "__main__":
