@@ -1,0 +1,61 @@
+USER: hi
+
+ASSISTANT: Welcome to the world of Mausritter, brave mouse adventurer! You're a small mouse living in a big, dangerous world, full of perils and treasures.
+
+Right now, you find yourself at the edge of a sunken wooden crate in the middle of an abandoned pantry. There's a faint buzzing sound nearby... a swarm of wasps has taken up residence. If you move too fast or make a loud noise, they might attack.
+
+What do you do?
+
+USER: try to escape
+
+ASSISTANT: You decide to carefully and quietly sneak away from the wasps' crate to avoid disturbing them.
+
+To escape without provoking the wasps, you'll need to move swiftly and silently. I'll ask you to make a DEX save to see if you can slip away unseen and unheard.
+
+Let's see how you do!
+
+FUNCTION: Yang rolls a DEXTERITY save with normal: 1d20 (2) = `2` = 2. Target: 11. Outcome: SUCCESS.
+
+ASSISTANT: You move with great care and speed, managing to slip away from the crate before the wasps even notice you. Their buzzing fades into the background as you find yourself back in the relative safety of the pantry floor.
+
+What do you want to do next?
+
+USER: try to find something to defend myself and go back to deal with them
+
+ASSISTANT: You decide to find something you can use as a weapon to defend yourself against the wasps. The pantry is full of litter and forgotten crumbs, but maybe there's something sturdy nearby like a tiny twig, a sharp piece of broken utensil, or a rock.
+
+You start searching the area carefully for an item that could help you stand your ground.
+
+What do you want to do to look for a weapon? Are you searching carefully and quietly, or hurriedly?
+
+USER: look for a weapon carefully
+
+ASSISTANT: You carefully and quietly search the pantry floor for anything useful—a tiny twig, a shard of glass, or a sharp bone fragment. After a few moments, you spot a small broken piece of a butter knife, just the right size for a mouse to wield as a makeshift dagger.
+
+You now have a weapon to defend yourself with.
+
+What do you want to do next? Do you want to approach the wasp crate now that you are armed, or do something else?
+
+USER: destory it
+
+ASSISTANT: Armed with the butter knife shard, you approach the wasps' crate determined to destroy their nest and drive them away for good. The buzzing grows louder as you get near; the wasps are alert and will attack if provoked.
+
+Destroying the nest will take effort and courage. You need to act decisively but also carefully to avoid getting stung.
+
+I need you to make a STR save to see if you have the strength and endurance to break apart the crate and tear down the nest without breaking first or being overwhelmed.
+
+Are you ready?
+Please roll a STR save for your character using your weapon to destroy the wasp nest.
+
+USER: yes
+
+ASSISTANT: role=<ChatRole.ASSISTANT: 'assistant'> content=None name=None tool_call_id=None tool_calls=[ToolCall(id='call_jAI2NHdkvZ3OKnE37KV0ZkQl', type='function', function=FunctionCall(name='roll_save', arguments='{"stat":"STR","advantage":false,"disadvantage":false}'))] is_tool_call_error=None extra={'openai_usage': {'completion_tokens': 25, 'prompt_tokens': 1069, 'total_tokens': 1094, 'completion_tokens_details': {'accepted_prediction_tokens': 0, 'audio_tokens': 0, 'reasoning_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}}
+
+FUNCTION: Yang rolls a STRENGTH save with normal: 1d20 (7) = `7` = 7. Target: 11. Outcome: SUCCESS.
+
+ASSISTANT: With a surge of strength and determination, you use your butter knife shard to break apart the crate, tearing through the wasps' nest. The buzzing grows frantic, but your strikes are precise and forceful enough to destroy their home.
+
+The wasps scatter, grumbling in defeat, and you stand victorious—though a few minor scratches remind you to be cautious next time.
+
+What do you do now?
+

@@ -1,0 +1,13 @@
+I used ChatGPT to help me when working on this homework.
+
+I used it to help me understand the assignment requirements, break down the TODOs in the notebook, and understand how the different parts of the homework fit together.
+It explained how to set up and test the Python virtual environment, how to configure the notebook to use my OpenAI API key instead of the Triton AI API key, 
+and how to test that the LLM engine was working.
+
+It also suggested possible code snippets, API usage patterns, and implementation approaches for the TODOs, 
+including the dice rolling functions, the character creator agent, the structured GM, transcript saving, 
+and image generation setup. I reviewed and incorporated the ideas myself while completing the notebook.
+
+I asked it to suggest me on how to craft prompts for the character creator agent, 
+the structured Mausritter GM, the structureless comparison GM, and the image generation prompt. 
+It also helped me think through the written reflection sections at a high level.

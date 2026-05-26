@@ -1,0 +1,138 @@
+USER: hi
+
+ASSISTANT: Hello! Ready to create your Mausritter mouse character? We'll start by rolling your mouse's three main attributes: Strength (STR), Dexterity (DEX), and Will (WIL).
+
+Let's roll for Strength first.
+
+FUNCTION: strength: 3d6kh2 (~~3~~, **6**, 5) = `11` = 11
+
+ASSISTANT: Your mouse's Strength (STR) is 11.
+
+Next, let's roll for Dexterity (DEX).
+
+FUNCTION: dexterity: 3d6kh2 (~~**1**~~, 5, **6**) = `11` = 11
+
+ASSISTANT: Your mouse's Dexterity (DEX) is 11.
+
+Now let's roll for Will (WIL).
+
+FUNCTION: will: 3d6kh2 (2, **6**, ~~2~~) = `8` = 8
+
+ASSISTANT: Your mouse's Will (WIL) is 8.
+
+Next step, we'll roll for your mouse's starting hit points (HP).
+
+FUNCTION: HP: 1d6 (3) = `3` = 3
+
+ASSISTANT: Your mouse's starting Hit Points (HP) is 3.
+
+Now, let's roll for the number of visible pips or spots on your mouse.
+
+FUNCTION: Pips: 1d6 (2) = `2` = 2
+
+ASSISTANT: Your mouse has 2 visible pips or spots.
+
+Next, we'll choose your mouse's background. I can provide you with some options to pick from or roll randomly. Would you like me to suggest backgrounds, or do you want a random roll?
+
+USER: random
+
+ASSISTANT: role=<ChatRole.ASSISTANT: 'assistant'> content=None name=None tool_call_id=None tool_calls=[ToolCall(id='call_JC7lkHIy0pBO2Jv5CP4WBtL9', type='function', function=FunctionCall(name='roll', arguments='{"dice":"d20"}'))] is_tool_call_error=None extra={'openai_usage': {'completion_tokens': 14, 'prompt_tokens': 1017, 'total_tokens': 1031, 'completion_tokens_details': {'accepted_prediction_tokens': 0, 'audio_tokens': 0, 'reasoning_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}}
+
+FUNCTION: 1d20 (**20**) = `20` = 20
+
+ASSISTANT: Your mouse's background is determined by a roll of 20. Let me find the corresponding background for that roll.
+
+The background for 20 is "Exiled."
+
+Next, let's pick your mouse's birthsign. Would you like me to suggest options or roll randomly?
+
+USER: options
+
+ASSISTANT: Here are some birthsign options you can choose from:
+
+1. The Hawk
+2. The Oak
+3. The Moon
+4. The Swallow
+5. The Stag
+6. The Snake
+
+Please pick the birthsign that sounds best for your mouse!
+
+USER: hawk
+
+ASSISTANT: Great choice! Your mouse's birthsign is The Hawk.
+
+Now, let's select a disposition for your mouse. Here are some options:
+
+1. Brave
+2. Cautious
+3. Curious
+4. Friendly
+5. Grumpy
+6. Loyal
+
+Which disposition would you like for your mouse?
+
+USER: brave
+
+ASSISTANT: Your mouse has a Brave disposition.
+
+Next, let's choose the coat pattern or color for your mouse. Here are some common options:
+
+1. Brown tabby
+2. Black with white spots
+3. Grey with stripes
+4. White with brown patches
+5. Golden
+6. Plain grey
+
+Please select one for your mouse.
+
+USER: 4
+
+ASSISTANT: Your mouse's coat is white with brown patches.
+
+Now let's add a physical detail to make your mouse unique. Here are some options:
+
+1. A scar over one eye
+2. One ear slightly bent
+3. A long, bushy tail
+4. Wears a tiny leather bracelet
+5. Has a patch of fur missing on the back
+6. Bright green eyes
+
+Which physical detail would you like?
+
+USER: 2 and 6
+
+ASSISTANT: Great! Your mouse has one ear slightly bent and bright green eyes.
+
+Now, what would you like to name your mouse?
+
+USER: Yang
+
+ASSISTANT: Yang is a wonderful name for your mouse!
+
+Finally, please provide a brief description of Yang. You can mention their personality, background as an Exiled, and any starting items or equipment they might have. If you'd like, I can help craft one for you based on the details so far. Would you like help with the description?
+
+USER: help me
+
+ASSISTANT: Certainly! Here's a description based on what we've created for Yang:
+
+Yang is a brave little mouse with a striking white coat adorned with brown patches. One ear is slightly bent, giving them a charming, rugged look, and their bright green eyes gleam with determination. As an Exiled, Yang carries the weight of a past marked by banishment but faces the future with courage and resolve. With a starting set of basic adventuring gear, Yang is ready to face whatever dangers lie ahead in the wilds.
+
+Does this description work for you, or would you like to add or change anything?
+
+USER: yes
+
+ASSISTANT: role=<ChatRole.ASSISTANT: 'assistant'> content=None name=None tool_call_id=None tool_calls=[ToolCall(id='call_d0jtQng3oB6FxCa5oXedF7Fy', type='function', function=FunctionCall(name='make_mouse', arguments='{"strength":11,"dexterity":11,"will":8,"hp":3,"pips":2,"background":"Exiled","birthsign":"The Hawk","disposition":"Brave","coat":"White with brown patches","physical_detail":"One ear slightly bent and bright green eyes","name":"Yang","description":"Yang is a brave little mouse with a striking white coat adorned with brown patches. One ear is slightly bent, giving them a charming, rugged look, and their bright green eyes gleam with determination. As an Exiled, Yang carries the weight of a past marked by banishment but faces the future with courage and resolve. With a starting set of basic adventuring gear, Yang is ready to face whatever dangers lie ahead in the wilds."}'))] is_tool_call_error=None extra={'openai_usage': {'completion_tokens': 164, 'prompt_tokens': 1664, 'total_tokens': 1828, 'completion_tokens_details': {'accepted_prediction_tokens': 0, 'audio_tokens': 0, 'reasoning_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 1536}}}
+
+FUNCTION: Successfully created mouse: Yang. The structured character sheet is saved.
+
+ASSISTANT: Your mouse character, Yang, is all set! If you want to start your adventure or make any tweaks, just let me know. Ready to explore the world of Mausritter?
+
+USER: role=<ChatRole.USER: 'user'> content='' name=None tool_call_id=None tool_calls=None is_tool_call_error=None extra={}
+
+ASSISTANT: If you have any more questions or need help with your Mausritter adventures, feel free to ask. Have fun with Yang!
+

@@ -1,0 +1,31 @@
+This homework builds a small AI Game Master for Mausritter using Kani, OpenAI, and function calling.
+
+First, the notebook sets up an OpenAI-backed Kani engine using my OpenAI API key. 
+The engine is used by the different Kani agents in the assignment.
+
+In Part 1, the code uses the d20 library to roll dice expressions such as d20, 1d6, and 3d6kh2. 
+The DiceKani class exposes dice rolling as an AI function, so the language model can ask Python to roll dice 
+instead of inventing random results.
+
+In Part 2, the Mouse dataclass stores the structured character sheet: stats, HP, pips, background, 
+birthsign, disposition, coat, physical detail, name, and description. MouseCreatorKani extends DiceKani 
+and adds helper functions for rolling character creation values. Once all required fields are known, 
+the make_mouse function saves the completed Mouse object so it can be reused later in the game.
+
+The character creator prompt gives the model a step-by-step role: guide the player through making a mouse, 
+use tools for dice rolls, and call make_mouse when the character is complete. The notebook then saves the 
+character data to JSON.
+
+For the portrait section, the code builds an image prompt from the saved mouse's structured fields and description, 
+then uses an OpenAI image generation call to create and save a character portrait.
+
+In Part 3, MausritterKani adds a roll_save function. It takes a stat such as STR, DEX, or WIL, rolls a d20, 
+compares the result to the mouse's saved stat, and returns whether the save succeeds or fails. 
+Advantage and disadvantage are handled by rolling two d20s and keeping the lower or higher result.
+
+The structured GM prompt tells the model to run a short Mausritter adventure while using roll_save whenever 
+a risky action needs a save. This keeps the game grounded in the character sheet and real dice rolls.
+
+The structureless GM uses a normal Kani without tools. It can still tell a story, but it does not have access 
+to Python dice rolling or structured save resolution. The comparison shows why structured game state and tool 
+calls can make the GM more consistent.
