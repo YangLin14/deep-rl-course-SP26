@@ -170,3 +170,11 @@ save.txt
 
 homeworks/hw1/part-4-pddl-extra-credit/pddl-parser
 .DS_Store
+
+# HW3 local/generated files
+homeworks/hw3/creator-*.json
+homeworks/hw3/gm-*.json
+homeworks/hw3/my-character.json
+homeworks/hw3/guide.md
+homeworks/hw3/dalle/*
+!homeworks/hw3/dalle/character_portrait.png
