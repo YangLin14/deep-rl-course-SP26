@@ -1,0 +1,41 @@
+Zork step 77 reasoning notes
+
+"The user is stuck because they typed "help" and got unknown. Maybe the game
+is in a mode where unknown words cause that response. Perhaps we need to use
+"?" or "?" command? In Zork, "?" is a command to get help."
+
+Issue: The trace over-indexes on the most recent failed parser command instead
+of using the current room description. The problem is not that the player
+needs a help command; the player is at End of Rainbow and needs a valid exit.
+
+---
+
+"At End of Rainbow location, there is a narrow path to southwest (which they
+tried earlier and got back to Canyon Bottom). So maybe they need to go
+"southwest" again? They already did and got back. The path continues maybe to
+"southwest" again? Actually they went southwest from End of Rainbow and got
+Canyon Bottom. Then they tried north and got back to End of Rainbow. So the
+path is a loop? Not sure."
+
+Issue: The model correctly reads the available exit, then dismisses it because
+it has seen the route before. This is a weak state-tracking issue: southwest is
+still the only described way out of the current location.
+
+---
+
+"Thus we need to find the saw. Where is the saw? In Zork I, there is a "saw"
+in the "shed" which is north of the house? Actually there is a "shed" somewhere.
+The "shed" contains a "saw". The "saw" can cut the boards. Then you can go
+"east" into house, then "north" to "living room", "west" to "kitchen"?"
+
+Issue: Unsupported world-knowledge speculation. None of the recent observations
+mention a saw, shed, kitchen, or a reachable house route, so this consumes many
+tokens without helping choose the next legal action.
+
+---
+
+"Thus we need to issue "up"."
+
+Issue: The conclusion contradicts the current observation. The player is still
+at End of Rainbow, whose listed path is southwest. The next game response
+confirms this was wrong: "You can't go that way."

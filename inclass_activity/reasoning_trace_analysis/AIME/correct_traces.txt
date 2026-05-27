@@ -1,0 +1,28 @@
+Reasoning trace labels
+
+1. Correct trace: trace_B.txt
+   Check: the correct count is 610. The bad residues are 5-9 and 15-19
+   modulo 25, but only after at least one 25-cent coin is available. Trace A
+   overcounts failures by including small values like 5-9 and 15-19.
+
+2. Correct trace: trace_A.txt
+   Check: the correct final value is 259. The reliable setup is to solve
+   y = f(34y^2) by period and then sum the valid y-values. Trace B begins
+   with a false symmetry claim about intersections pairing as (x, y) and
+   (x, -y).
+
+3. Correct trace: trace_A.txt
+   Check: the correct final value is 62. Trace A factors the quartic after
+   the substitution t = x sqrt(3), gets y = (3 - sqrt(57))/2, and therefore
+   a + b + c = 3 + 57 + 2 = 62.
+
+4. Correct trace: trace_B.txt
+   Check: the correct final value is 149. The key correction is that
+   sin(5x) = 0 has 9 solutions on 0 < x < 2pi, not 10, because both
+   endpoints are excluded. Thus n = 139 and t = 10.
+
+5. Correct trace: trace_A.txt
+   Check: the correct final value is 336. Numerically, the relevant minor
+   arcs are DE = 72, HJ = 24, and FG = 72, so
+   DE + 2 HJ + 3 FG = 72 + 48 + 216 = 336. Trace B makes an early angle/arc
+   assignment error by treating arc DE as 168 degrees.
