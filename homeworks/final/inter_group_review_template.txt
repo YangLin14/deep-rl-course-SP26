@@ -33,9 +33,9 @@ IMPORTANT: Do NOT include any new lines (`\n`) in your response.
 ===================== COPY BELOW ==========================
 ===========================================================
 
-Your name:
-Your email:
-Your PID:
+Your name: Fong-Yu Lin
+Your email: folin@ucsd.edu
+Your PID: A18496379
 
 # Review 1
 
